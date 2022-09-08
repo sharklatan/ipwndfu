@@ -3,7 +3,14 @@
 
 
 **Read [disclaimer](#disclaimer) before using this software.*
+<<<<<<< Updated upstream
 
+=======
+## About this fork
+* A8/A9 ipwndfu support 
+* this fork work on A8 and A9 ipwndfu which allows loading of unsigned IMG4 files on t7000, s8000 and s8003 devices.
+* Run  ```./ipwndfu -p --rmsigchecks```.
+>>>>>>> Stashed changes
 
 ## checkm8
 

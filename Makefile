@@ -38,10 +38,18 @@ arm64:
 	xcrun -sdk iphoneos clang src/usb_0xA1_2_arm64.S -target arm64-apple-darwin -Wall -o bin/usb_0xA1_2_arm64.o
 	gobjcopy -O binary -j .text bin/usb_0xA1_2_arm64.o bin/usb_0xA1_2_arm64.bin
 	rm bin/usb_0xA1_2_arm64.o
+	
+	xcrun -sdk iphoneos clang src/rompatch.S -target arm64-apple-darwin -Wall -o bin/rompatch.o
+	gobjcopy -O binary -j .text bin/rompatch.o bin/rompatch.bin
+	rm bin/rompatch.o
 
 	xcrun -sdk iphoneos clang src/checkm8_arm64.S -target arm64-apple-darwin -Wall -o bin/checkm8_arm64.o
 	gobjcopy -O binary -j .text bin/checkm8_arm64.o bin/checkm8_arm64.bin
 	rm bin/checkm8_arm64.o
+
+	xcrun -sdk iphoneos clang src/checkm8_nopaddingcorruption_arm64.S -target arm64-apple-darwin -Wall -o bin/checkm8_nopaddingcorruption_arm64.o
+	gobjcopy -O binary -j .text bin/checkm8_nopaddingcorruption_arm64.o bin/checkm8_nopaddingcorruption_arm64.bin
+	rm bin/checkm8_nopaddingcorruption_arm64.o
 
 	xcrun -sdk iphoneos clang src/t8010_t8011_disable_wxn_arm64.S -target arm64-apple-darwin -Wall -o bin/t8010_t8011_disable_wxn_arm64.o
 	gobjcopy -O binary -j .text bin/t8010_t8011_disable_wxn_arm64.o bin/t8010_t8011_disable_wxn_arm64.bin
@@ -50,3 +58,9 @@ arm64:
 	xcrun -sdk iphoneos clang src/t8015_shellcode_arm64.S -target arm64-apple-darwin -Wall -o bin/t8015_shellcode_arm64.o
 	gobjcopy -O binary -j .text bin/t8015_shellcode_arm64.o bin/t8015_shellcode_arm64.bin
 	rm bin/t8015_shellcode_arm64.o
+<<<<<<< Updated upstream
+=======
+        
+        
+        
+>>>>>>> Stashed changes
